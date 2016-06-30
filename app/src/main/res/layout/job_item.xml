@@ -2,21 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="1dp"
-    >
+    android:paddingTop="1dp">
 
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/cv_job_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:scrollbars="vertical">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:paddingTop="16dp"
+            android:layout_height="wrap_content"
             android:paddingBottom="16dp"
-            android:layout_height="wrap_content">
+            android:paddingTop="16dp">
 
             <ImageView
                 android:id="@+id/iv_job_photo"
@@ -30,31 +28,30 @@
                 android:id="@+id/tv_job_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_job_photo"
                 android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/iv_job_photo"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_job_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_job_photo"
-                android:layout_below="@id/tv_job_name" />
+                android:layout_below="@id/tv_job_name"
+                android:layout_toRightOf="@id/iv_job_photo" />
 
             <TextView
                 android:id="@+id/tv_job_city"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/iv_job_photo"
-                android:layout_below="@id/tv_job_company" />
+                android:layout_below="@id/tv_job_company"
+                android:layout_toRightOf="@id/iv_job_photo" />
 
             <TextView
                 android:id="@+id/tv_job_post_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@id/tv_job_name"
-               />
+                android:layout_below="@id/tv_job_name" />
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

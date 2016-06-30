@@ -1,13 +1,242 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="xz.sainumtown.week_4_execrise.fragments.MovieFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="movie" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#ECEFF1"
+        android:orientation="vertical"
+        tools:context="xz.sainumtown.week_4_execrise.fragments.MovieFragment">
 
-</FrameLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/iv_job_photo"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/warcraft_teaser_poster" />
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/iv_job_photo"
+                android:lineSpacingMultiplier="1.2"
+                android:text="WARCRAFT: THE BEGINNING (3D)"
+                android:textColor="@color/color_black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_detail_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/tv_movie_title"
+                android:layout_toRightOf="@id/iv_job_photo"
+                android:text="DETAILS" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@id/tv_movie_title"
+                android:layout_toRightOf="@id/btn_detail_movie"
+                android:src="@drawable/ic_share_black_24dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Story"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/movie_detail"
+                android:textColor="@color/color_black" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@color/color_white"
+                android:text="READ MORE"
+                android:textColor="#005500"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/color_white"
+            android:elevation="1dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_now_showing_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Showing In"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_now_showing_in"
+                android:layout_marginTop="6dp"
+                android:text="Movie planet"
+                android:textColor="@color/color_black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_city_movie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie"
+                android:layout_marginTop="6dp"
+                android:text="Pyin Oo Lwin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_city_movie"
+                android:layout_marginTop="6dp"
+                android:text="12:30 PM, 3:30 PM ,6:30 PM , 9:30 PM"
+                android:textColor="@color/color_black" />
+
+
+            <ImageButton
+                android:id="@+id/button_share"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignBaseline="@id/tv_now_showing_in"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@+id/button_call"
+                android:background="@drawable/shape_round_button"
+                android:src="@drawable/ic_share_black_24dp"
+                android:tint="#484646" />
+
+            <ImageButton
+                android:id="@+id/button_call"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignBaseline="@id/tv_now_showing_in"
+                android:layout_alignParentRight="true"
+                android:layout_margin="1dp"
+
+                android:background="@drawable/shape_round_button"
+                android:padding="8dp"
+                android:src="@drawable/ic_phone_in_talk_black_24dp"
+                android:tint="#484646" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/tv_now_showing_in2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Showing In"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_movie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_now_showing_in2"
+                android:layout_marginTop="6dp"
+                android:text="Movie planet"
+                android:textColor="@color/color_black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_city_movie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_movie2"
+                android:layout_marginTop="6dp"
+                android:text="Pyin Oo Lwin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_city_movie2"
+                android:layout_marginTop="6dp"
+                android:text="12:30 PM, 3:30 PM ,6:30 PM , 9:30 PM"
+                android:textColor="@color/color_black" />
+
+
+            <ImageButton
+                android:id="@+id/button_share2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignBaseline="@id/tv_now_showing_in2"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@+id/button_call2"
+                android:background="@drawable/shape_round_button"
+                android:src="@drawable/ic_share_black_24dp"
+                android:tint="#484646" />
+
+            <ImageButton
+                android:id="@+id/button_call2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignBaseline="@id/tv_now_showing_in2"
+                android:layout_alignParentRight="true"
+                android:layout_margin="1dp"
+                android:background="@drawable/shape_round_button"
+                android:src="@drawable/ic_phone_in_talk_black_24dp"
+                android:tint="#484646" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
