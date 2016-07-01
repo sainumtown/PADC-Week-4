@@ -12,22 +12,22 @@
 
         <item
             android:id="@+id/left_menu_jobSearch"
-            android:icon="@drawable/ic_favorite_black_24dp"
+            android:icon="@drawable/ic_search_black_24dp"
             android:title="@string/left_menu_jobSearch"/>
 
         <item
             android:id="@+id/left_menu_pulse"
-            android:icon="@drawable/ic_file_download_black_24dp"
+            android:icon="@drawable/ic_1467418661_news"
             android:title="@string/left_menu_pulse"/>
 
         <item
             android:id="@+id/left_menu_movie"
-            android:icon="@drawable/ic_more_horiz_black_24dp"
+            android:icon="@drawable/ic_movie_creation_black_24dp"
             android:title="@string/left_menu_movie"/>
 
         <item
             android:id="@+id/left_menu_book"
-            android:icon="@drawable/ic_settings_black_24dp"
+            android:icon="@drawable/ic_import_book_black_24dp"
             android:title="@string/left_menu_book"/>
 
     </group>

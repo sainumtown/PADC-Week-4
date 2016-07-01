@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import xz.sainumtown.week_4_execrise.R;
 
@@ -32,8 +34,15 @@ public class LinkedInFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_linked_in, container, false);
+        View view = inflater.inflate(R.layout.fragment_linked_in, container, false);
+        ImageView ivEdit = (ImageView) view.findViewById(R.id.iv_edit_linkin);
+        ivEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Edit clicked",Toast.LENGTH_SHORT).show();
+            }
+        });
+        return view;
     }
 
 

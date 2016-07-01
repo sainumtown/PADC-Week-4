@@ -50,6 +50,8 @@ public class JobSearchFragment extends Fragment {
         rv.setLayoutManager(mLinearLayoutManager);
 
         rv.setAdapter(adapter);
+
+
         return view;
     }
 

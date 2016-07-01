@@ -52,6 +52,7 @@
                 android:text="DETAILS" />
 
             <ImageButton
+                android:id="@+id/btn_share_movie"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_below="@id/tv_movie_title"

@@ -22,12 +22,12 @@
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_toLeftOf="@+id/drop_down_option_menu"
+                android:layout_toLeftOf="@+id/iv_search_pulse"
                 android:src="@drawable/ic_person_black_24dp"
                 android:tint="@color/color_white" />
 
             <ImageView
-                android:id="@+id/drop_down_option_menu"
+                android:id="@+id/iv_search_pulse"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="16dp"
@@ -87,7 +87,7 @@
                 android:layout_below="@+id/user_profile_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:text="Android free tutorials and example"
+                android:text="Here are top stories for you today"
                 android:textColor="#fff"
                 android:textSize="14sp" />
         </RelativeLayout>
