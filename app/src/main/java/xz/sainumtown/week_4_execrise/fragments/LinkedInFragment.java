@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
-
+import android.widget.TextView;
 import xz.sainumtown.week_4_execrise.R;
 
 
@@ -42,6 +42,8 @@ public class LinkedInFragment extends Fragment {
                 Toast.makeText(getContext(),"Edit clicked",Toast.LENGTH_SHORT).show();
             }
         });
+
+
         return view;
     }
 
