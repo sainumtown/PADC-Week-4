@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import xz.sainumtown.week_4_execrise.R;
@@ -25,6 +26,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    TextView tvTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
+        tvTitle = (TextView) findViewById(R.id.tv_title);
+        tvTitle.setText(getResources().getText(R.string.left_menu_linkIn));
+
         if (savedInstanceState == null) {
             LinkedInFragment fragment = LinkedInFragment.newInstance();
             getSupportFragmentManager().beginTransaction()
@@ -65,7 +70,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(final MenuItem menuItem) {
         menuItem.setChecked(true);
         drawerLayout.closeDrawers();
-
+        tvTitle = (TextView) findViewById(R.id.tv_title);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -75,32 +80,36 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, linkedInFragment)
                                 .commit();
+
+                        tvTitle.setText(getResources().getText(R.string.left_menu_linkIn));
                         break;
                     case R.id.left_menu_jobSearch:
                         JobSearchFragment jobSearchFragment = JobSearchFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, jobSearchFragment)
                                 .commit();
+                        tvTitle.setText(getResources().getText(R.string.left_menu_jobSearch));
                         break;
                     case R.id.left_menu_pulse:
                         PulseFragment pulseFragment = PulseFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, pulseFragment)
                                 .commit();
+                        tvTitle.setText(getResources().getText(R.string.left_menu_pulse));
                         break;
                     case R.id.left_menu_movie:
                         MovieFragment movieFragment = MovieFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, movieFragment)
                                 .commit();
-
+                        tvTitle.setText(getResources().getText(R.string.left_menu_movie));
                         break;
                     case R.id.left_menu_book:
                         BookFragment bookFragment = BookFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, bookFragment)
                                 .commit();
-
+                        tvTitle.setText(getResources().getText(R.string.left_menu_book));
                         break;
                 }
             }
