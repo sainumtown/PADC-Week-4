@@ -75,7 +75,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void run() {
                 switch (menuItem.getItemId()) {
-                    // navigate to link in fragment
+
                     case R.id.left_menu_linkIn:
                         LinkedInFragment linkedInFragment = LinkedInFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
@@ -85,7 +85,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         tvTitle.setText(getResources().getText(R.string.left_menu_linkIn));
                         break;
                     case R.id.left_menu_jobSearch:
-                        // navigate to job search
+
                         JobSearchFragment jobSearchFragment = JobSearchFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, jobSearchFragment)
@@ -93,7 +93,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         tvTitle.setText(getResources().getText(R.string.left_menu_jobSearch));
                         break;
                     case R.id.left_menu_pulse:
-                        // navigate to pulse
+
                         PulseFragment pulseFragment = PulseFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, pulseFragment)
@@ -101,7 +101,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         tvTitle.setText(getResources().getText(R.string.left_menu_pulse));
                         break;
                     case R.id.left_menu_movie:
-                        // navigate to movie
+
                         MovieFragment movieFragment = MovieFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, movieFragment)
@@ -109,7 +109,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         tvTitle.setText(getResources().getText(R.string.left_menu_movie));
                         break;
                     case R.id.left_menu_book:
-                        // navigate to book
+                       
                         BookFragment bookFragment = BookFragment.newInstance();
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.fl_container, bookFragment)
